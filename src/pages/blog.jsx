@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { createRoot } from "react-dom/client";
-import Header from '../layouts/Navbar.jsx';
-import Footer from "../layouts/Footer.jsx";         
+import { createRoot } from "react-dom/client";       
 import LoginModal from '../components/login.jsx';
 import SignupModal from '../components/signup.jsx';
 import VerifyEmailModal from '../components/verifyEmail.jsx';
@@ -237,13 +235,13 @@ const Blog = () => {
 
   return (
     <>
-      <Header />
       <section className="py-5">
         <div className="container">
           {!selectedBlog ? (
             <>
-              <div className="text-center mb-5">
-                <h1 className="mb-1">Porta Courts Blogs</h1>
+              <div className="text-center">
+                {/* size increase through fontsize */}
+                <h1 className="mb-1" style={{ fontSize: "3.5rem" }}>Porta Courts Blogs</h1>
                 <p className="mb-5 f18 text-grey">
                   Stay updated with the latest trend!
                 </p>
@@ -310,6 +308,7 @@ const Blog = () => {
                               href={card.url}
                               target="_blank"
                               rel="noopener noreferrer"
+                              style={{ textDecoration: 'none' }}
                             >
                               <div className="listimage-blog">
                                 <img
@@ -369,8 +368,6 @@ const Blog = () => {
       <VerifyEmailModal />
       <ChangePasswordModal />
       <EditProfileModal />
-      
-      <Footer />
     </>
   );
 };
