@@ -993,6 +993,7 @@ const Cart = () => {
                         type="button"
                         className="btn green-btn"
                         id="applyCoupon"
+                        style={{ color: "green", textDecorationColor: "white" }}
                       >
                         Apply
                       </button>
