@@ -16,14 +16,13 @@ const TrackOrder = () => {
   const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = (e) => {
-    e.pventDefault();
+    e.preventDefault();
 
     setSubmitted(true);
   }
 
   return (
     <>
-    <Header />
     <section className="trackorder-wrapper py-5">
       <div className="container">
         <div className="row">
@@ -46,6 +45,10 @@ const TrackOrder = () => {
                   placeholder="Enter your Order Number"
                   value={orderNumber}
                   onChange={(e) => setOrderNumber(e.target.value)}
+                  style={{ 
+                    outline: '1px solid green', 
+                    boxShadow: 'none', 
+                  }}
                   required
                 />
               <button 
@@ -73,7 +76,6 @@ const TrackOrder = () => {
     <ChangePasswordModal />
     <EditProfileModal />
     
-    <Footer />
     </>
   )
 }
