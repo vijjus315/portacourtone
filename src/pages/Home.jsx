@@ -7,6 +7,7 @@ import SignupModal from '../components/signup.jsx';
   import ChangePasswordModal from '../components/changePassword.jsx';
 import EditProfileModal from '../components/editProfile.jsx';
 import VerifyEmailModal from '../components/verifyEmail.jsx';
+import Ceo from '../components/ceo.jsx';
 // import Header from '../layouts/Navbar.jsx';
 // import Footer from '../layouts/Footer.jsx';
 
@@ -16,8 +17,6 @@ const Home = () => {
     const [product, setProduct] = useState([]);
     const [testimonail, setTestimonail] = useState([]);
     const [post, setPost] = useState([]);
-
-    const fallbackHero = "/webassets/img/bzM09pT0Nlgp5pXMcrdkgt8WCMpyt3xcCSNLmWz5.jpg";
 
     useEffect(() => {
         async function load() {
@@ -58,18 +57,15 @@ const Home = () => {
         }
         load();
     }, []);
+    console.log("Banner value:", banner);
 
     // Fallback slides if no banners are configured in DB
     const fallbackSlides = [
-        fallbackHero
-        // 'https://www.portacourts.com/storage/images/hero-banner-1.jpg',
-        // 'https://www.portacourts.com/storage/images/hero-banner-2.jpg', 
-        // 'https://www.portacourts.com/storage/images/hero-banner-3.jpg'
+        'http://192.168.1.4:3000/resources/images/bzM09pT0Nlgp5pXMcrdkgt8WCMpyt3xcCSNLmWz5.jpg',
     ];
 
     return (
         <>
-            
             <LoginModal />
             <SignupModal />
             <VerifyEmailModal />
@@ -368,13 +364,12 @@ const Home = () => {
                 </div>
             </section>
 
-            {/* CEO Card (removed per request) */}
-
             {/* About Us */}
             <section className="aboutus-wrapper">
                 <div className="container-fluid px-0">
                     <div className="row g-0">
                         <div className="col-lg-7 abouts-inner-text text-white position-relative">
+                            {/* <img src={`${window.location.origin}/webassets/img/aboutus-side.svg`} alt="About Us" /> */}
                             <h2 className="primary-theme mb-4">About Us</h2>
                             <p className="text-white mb-5">
                                 Welcome to PortaCourts, where innovation and quality meet to provide you with the best sports flooring solutions. Our courts are designed with a professional surface grain that ensures anti-skid safety, allowing for free and dynamic movement on the court. Tailored specifically for pickleball, our floors meet the required friction coefficient standards, ensuring both performance and safety.
