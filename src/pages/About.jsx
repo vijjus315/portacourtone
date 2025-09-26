@@ -1,3 +1,4 @@
+import React from 'react';
 import { createRoot } from 'react-dom/client';
 import Header from '../layouts/Navbar.jsx';
 import Footer from '../layouts/Footer.jsx';
@@ -12,14 +13,14 @@ import VerifyEmailModal from '../components/verifyEmail';
 const AboutUs = () => {
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       {/* Banner */}
       <section className="about-wrapper pt-70 pb-5">
         <div className="container">
           <div className="row align-items-center">
             <div className="col-lg-7">
               <div className="banner-text">
-                <h1 className="font-oswald fw-600 text-uppercase">
+                <h1 className="font-oswald fw-600 text-uppercase" style={{ fontSize: "4rem" }}>
                   <span className="color-change primary-theme">A</span>
                   BOUT US
                 </h1>
@@ -175,54 +176,6 @@ const AboutUs = () => {
 
       {/* ceo section */}
       <Ceo />
-      {/* <div className="item">
-        <div className="row">
-          <div className="col-md-4">
-            <div className="testimonial-image position-relative">
-              <img
-                src={`https://www.portacourts.com/storage/images/eVJ82A8WLHTxXDp19uCg4J5nbVkq37eOlThNMti7.jpg`}
-                className="img-fluid"
-              />
-              <div className="name-testi">
-                <img
-                  src={`${window.location.origin}/webassets/img/ellipse.svg`}
-                  className="img-fluid"
-                />
-                <h6 className="text-center black-grey">Hammy Owen</h6>
-              </div>
-            </div>
-          </div>
-          <div className="col-md-8 mt-3 mt-md-0">
-            <div className="testimonials-text ps-md-4">
-              <h2 className="text-white">
-                CEO <br />
-              </h2>
-              <p className="text-white "></p>
-              <div className="text-white">
-                This all started when I wanted to avoid painting lines on my
-                tennis court and found the temporary options unsatisfactory.
-                After extensive research and beta testing, I believe we’ve
-                created an incredible alternative that’s not only high quality but
-                also much cheaper than a permanent court and fully portable.
-                We’ve used this setup everywhere—from backyard blacktops to tennis
-                courts, and even in corporate conference rooms during meetings.
-              </div>
-              <div className="text-white">
-                <br />
-              </div>
-              <div className="text-white">
-                Whether you’re looking for a semi-permanent or permanent solution,
-                or even considering starting a side hustle, this court is perfect
-                for you. Market data shows that this is a lot more fun than
-                renting bounce houses 🤪 (with daily rentals fetching $350-$450/day).
-                You can organize tournaments, play in unique locations, or have
-                your own court ready when you can’t find an open one. Be an early
-                adopter!
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> */}
 
       {/* dark elements */}
       <section className="bgdark-grey py-5">
@@ -409,7 +362,7 @@ const AboutUs = () => {
       <ChangePasswordModal />
       <EditProfileModal />
       
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };
