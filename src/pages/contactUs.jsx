@@ -1,7 +1,5 @@
 import React from 'react'
 import { createRoot } from 'react-dom/client';
-import Header from '../layouts/Navbar.jsx';
-import Footer from '../layouts/Footer.jsx';
 import LoginModal from '../components/login.jsx';
 import SignupModal from '../components/signup.jsx';
 import VerifyEmailModal from '../components/verifyEmail.jsx';
@@ -12,13 +10,12 @@ import '../styles/bootstrap';
 const ContactUs = () => {
   return (
     <>
-    <Header />
     <section className="contact-wrapper">
             <div className="container">
                 <div className="row align-items-center">
                     <div className="col-lg-7">
                         <div className="banner-text">
-                            <h1 className="font-oswald fw-600 text-uppercase">
+                            <h1 className="font-oswald fw-600 text-uppercase" style={{ fontSize: "3.5rem" }}>
                                 <span className="color-change primary-theme">C</span>ontact uS
                             </h1>
                             <p className="text-white">
@@ -359,8 +356,6 @@ const ContactUs = () => {
      <VerifyEmailModal />
      <ChangePasswordModal />
      <EditProfileModal />
-    
-    <Footer />
     </>
 
   )
