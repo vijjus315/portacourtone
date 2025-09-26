@@ -74,7 +74,7 @@ function App() {
               <Route
                 path="/products"
                 element={
-                  <PageLayout title="Products">
+                  <PageLayout title="">
                     <Products />
                   </PageLayout>
                 }

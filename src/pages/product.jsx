@@ -8,6 +8,8 @@ import EditProfileModal from '../components/editProfile.jsx';
 import { getProducts } from '../services/product.js';
 import { addToWishlist, removeFromWishlist } from '../services/wishlist.js';
 import { getImageUrl } from '../utils/imageUtils.js';
+//! price slider component
+import PriceRangeSlider from '../components/priceRangeSlider.jsx';
 import '../styles/bootstrap';
 
 const ProductsPage = () => {
@@ -277,7 +279,7 @@ const ProductsPage = () => {
                             </ul>
 
                             <div>
-                                <h4 className="font-oswald py-2">Shop By Price</h4>
+                                {/* <h4 className="font-oswald py-2">Shop By Price</h4>
                                 <div className="price-range-slider pt-4">
                                     <div id="slider-range" className="range-bar"></div>
                                     <div className="d-flex align-items-center mt-3 justify-content-between">
@@ -288,7 +290,12 @@ const ProductsPage = () => {
                                             <input type="hidden" name="max_price" id="max-price" value={priceRange[1]} />
                                         </p>
                                     </div>
-                                </div>
+                                </div> */}
+                                <PriceRangeSlider 
+                                priceRange={priceRange}
+                                setPriceRange={setPriceRange}
+                                maxValue={15000}
+                                />
                             </div>
                             <div>
                                 <h3 className="font-oswald pb-2 pt-3">Sort By</h3>
