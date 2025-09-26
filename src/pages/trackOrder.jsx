@@ -1,7 +1,5 @@
 import React, { useState } from 'react'
 import { createRoot } from 'react-dom/client';
-import Header from '../layouts/Navbar.jsx';
-import Footer from '../layouts/Footer.jsx';
 import LoginModal from '../components/login.jsx';
 import SignupModal from '../components/signup.jsx';
 import VerifyEmailModal from '../components/verifyEmail.jsx';

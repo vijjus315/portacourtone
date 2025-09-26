@@ -92,7 +92,7 @@ function App() {
               <Route
                 path="/about-us"
                 element={
-                  <PageLayout title="About Us">
+                  <PageLayout title="">
                     <AboutUs />
                   </PageLayout>
                 }
@@ -100,7 +100,7 @@ function App() {
               <Route
                 path="/contact-us"
                 element={
-                  <PageLayout title="Contact Us">
+                  <PageLayout title="">
                     <ContactUs />
                   </PageLayout>
                 }
@@ -110,7 +110,7 @@ function App() {
               <Route
                 path="/blog"
                 element={
-                  <PageLayout title="Blog">
+                  <PageLayout title="">
                     <Blog />
                   </PageLayout>
                 }
@@ -128,7 +128,7 @@ function App() {
               <Route
                 path="/cart"
                 element={
-                  <PageLayout title="Shopping Cart">
+                  <PageLayout title="">
                     <Cart />
                   </PageLayout>
                 }
@@ -136,7 +136,7 @@ function App() {
               <Route
                 path="/wishlist"
                 element={
-                  <PageLayout title="Wishlist">
+                  <PageLayout title="">
                     <Wishlist />
                   </PageLayout>
                 }
@@ -166,9 +166,9 @@ function App() {
                 }
               />
               <Route
-                path="/track-order"
+                path="/track-orders"
                 element={
-                  <PageLayout title="Track Order">
+                  <PageLayout title="">
                     <TrackOrder />
                   </PageLayout>
                 }

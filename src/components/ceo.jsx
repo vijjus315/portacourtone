@@ -107,13 +107,13 @@ const Ceo = () => {
                                 className="img-fluid"
                                 alt="Hammy Owen"
                               />
-                              <div className="name-testi">
+                              <div className="relative">
                                 <img
                                   src="https://www.portacourts.com/webassets/img/ellipse.svg"
                                   className="img-fluid"
                                   alt="Ellipse"
                                 />
-                                <h6 className="text-center black-grey">
+                                <h6 className="text-center black-grey font-bold text-xl">
                                   Hammy Owen
                                 </h6>
                               </div>
