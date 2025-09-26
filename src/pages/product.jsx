@@ -1,7 +1,5 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { createRoot } from 'react-dom/client';
-import Header from '../layouts/Navbar.jsx';
-import Footer from '../layouts/Footer.jsx';
 import LoginModal from '../components/login.jsx';
 import SignupModal from '../components/signup.jsx';
 import VerifyEmailModal from '../components/verifyEmail.jsx';
@@ -253,7 +251,6 @@ const ProductsPage = () => {
 
     return (
         <>
-        <Header />
         <section className="filter-wrapper py-5">
             <div className="container">
                 <div className="row">
@@ -266,15 +263,15 @@ const ProductsPage = () => {
                             </div>
                             <ul className="ps-0 category-listed ms-0" id="category-list">
                                 <li className="text-grey font-Yantramanav fw-400 category-item" data-category-id="1">
-                                    <input type="checkbox" name="catID[]" value="1" id="category-1" className="category-checkbox" checked={selectedCategoryIds.includes('1')} onChange={() => toggleCategory('1')} />
+                                    <input type="checkbox" name="catID[]" value="1" id="category-1" className="category-checkbox" checked={selectedCategoryIds.includes('1')} onChange={() => toggleCategory('1')} style={{ marginRight: '12px', position: 'relative', top: "2px" }} />
                                     <label htmlFor="category-1">TENNIS BALL COURTS</label>
                                 </li>
                                 <li className="text-grey font-Yantramanav fw-400 category-item" data-category-id="2">
-                                    <input type="checkbox" name="catID[]" value="2" id="category-2" className="category-checkbox" checked={selectedCategoryIds.includes('2')} onChange={() => toggleCategory('2')} />
+                                    <input type="checkbox" name="catID[]" value="2" id="category-2" className="category-checkbox" checked={selectedCategoryIds.includes('2')} onChange={() => toggleCategory('2')} style={{ marginRight: '12px', position: 'relative', top: "2px" }} />
                                     <label htmlFor="category-2">PICKLEBALL COURTS</label>
                                 </li>
                                 <li className="text-grey font-Yantramanav fw-400 category-item" data-category-id="3">
-                                    <input type="checkbox" name="catID[]" value="3" id="category-3" className="category-checkbox" checked={selectedCategoryIds.includes('3')} onChange={() => toggleCategory('3')} />
+                                    <input type="checkbox" name="catID[]" value="3" id="category-3" className="category-checkbox" checked={selectedCategoryIds.includes('3')} onChange={() => toggleCategory('3')} style={{ marginRight: '12px', position: 'relative', top: "2px" }} />
                                     <label htmlFor="category-3">SPIKE BALL COURTS</label>
                                 </li>
                             </ul>
@@ -286,7 +283,7 @@ const ProductsPage = () => {
                                     <div className="d-flex align-items-center mt-3 justify-content-between">
                                         <h6 className="price-filter">Prices Range</h6>
                                         <p className="range-value primary-theme">
-                                            <input type="text" id="amount" readOnly />
+                                            <input type="text" id="amount" />
                                             <input type="hidden" name="min_price" id="min-price" value={priceRange[0]} />
                                             <input type="hidden" name="max_price" id="max-price" value={priceRange[1]} />
                                         </p>
@@ -385,13 +382,15 @@ const ProductsPage = () => {
                                 const image = (p.product_images && p.product_images[0]) || {};
                                 const item = (p.variants && p.variants[0]) || {};
                                 const imgSrc = getImageUrl(image.image_url);
+                                console.log(imgSrc);
                                 return (
                                     <div className="col-md-6 col-xl-4 mb-3" key={p.id}>
                                         {/* /product-detail */}
                                         <a href={`/product-detail/${p.slug}?id=${p.id}`} className="text-decoration-none">
                                             <div className="feature-pro">
                                                 <div className="product-feature-img product-bg position-relative">
-                                                    <img alt="product_images" src={imgSrc} className="img-fluid product-pic" />
+                                                    {/* nothing works */}
+                                                    <img alt="product_images" src={imgSrc} className="img-fluid product-pic max-w-full max-h-full object-contain block" />
 
                                                     {/* <img alt="product_images" src={imgSrc} className="img-fluid product-pic" /> */}
                                                     <a 
@@ -410,7 +409,7 @@ const ProductsPage = () => {
                                                                     ? `${window.location.origin}/webassets/img/green-wishlist-bg.svg` 
                                                                     : `${window.location.origin}/webassets/img/unfillwishlist.svg`
                                                                 } 
-                                                                className="wishlist-icon" 
+                                                                className="wishlist-icon rounded-md bg-green-300 shadow-xl" 
                                                                 alt={wishlistItems.has(p.id) ? "Remove from wishlist" : "Add to wishlist"}
                                                             />
                                                         )}
@@ -455,8 +454,6 @@ const ProductsPage = () => {
         <VerifyEmailModal />
         <ChangePasswordModal />
         <EditProfileModal />
-        
-        <Footer />
         </>
     );
 };
@@ -470,3 +467,4 @@ if (typeof window !== 'undefined') {
         root.render(<ProductsPage />);
     }
 }
+
