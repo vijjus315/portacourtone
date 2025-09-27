@@ -192,6 +192,15 @@ const Reviews = ({ productRatings = [] }) => {
                     type="submit"
                     id="submitReview"
                     className="btn green-btn w-100 mt-2"
+                    style={{ backgroundColor: "var(--primary-theme)",
+                                    color: "#fff", 
+                                    borderRadius: "10px", 
+                                    padding: "11px 31px", 
+                                    height: "50px", 
+                                    border: "0",
+                                    textTransform: "capitalize", 
+                                    fontSize: "16px"
+                                }}
                   >
                     Submit Review
                   </button>
