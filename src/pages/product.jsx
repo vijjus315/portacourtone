@@ -257,24 +257,24 @@ const ProductsPage = () => {
             <div className="container">
                 <div className="row">
                     <div className="col-lg-3">
-                        <h3 className="font-oswald mb-3">Filters</h3>
+                        <h3 className="font-oswald mb-3" style={{color: '#7AB751', fontSize: '24px', fontWeight: '600'}}>Filters</h3>
                         <form method="GET" id="filter-form" onSubmit={handleApplyFilter}>
-                        <div className="filter-inner">
+                        <div className="filter-inner" style={{backgroundColor: '#f8f9fa', padding: '20px', borderRadius: '12px', border: '1px solid #e9ecef'}}>
                             <div>
-                                <h4 className="font-oswald py-2">Category</h4>
+                                <h4 className="font-oswald py-2" style={{color: '#333', fontSize: '18px', fontWeight: '600'}}>Category</h4>
                             </div>
-                            <ul className="ps-0 category-listed ms-0" id="category-list">
-                                <li className="text-grey font-Yantramanav fw-400 category-item" data-category-id="1">
+                            <ul className="ps-0 category-listed ms-0" id="category-list" style={{listStyle: 'none', padding: 0}}>
+                                <li className="text-grey font-Yantramanav fw-400 category-item" data-category-id="1" style={{marginBottom: '8px', padding: '8px 0'}}>
                                     <input type="checkbox" name="catID[]" value="1" id="category-1" className="category-checkbox" checked={selectedCategoryIds.includes('1')} onChange={() => toggleCategory('1')} style={{ marginRight: '12px', position: 'relative', top: "2px" }} />
-                                    <label htmlFor="category-1">TENNIS BALL COURTS</label>
+                                    <label htmlFor="category-1" style={{color: '#555', fontSize: '16px', cursor: 'pointer'}}>TENNIS BALL COURTS</label>
                                 </li>
-                                <li className="text-grey font-Yantramanav fw-400 category-item" data-category-id="2">
+                                <li className="text-grey font-Yantramanav fw-400 category-item" data-category-id="2" style={{marginBottom: '8px', padding: '8px 0'}}>
                                     <input type="checkbox" name="catID[]" value="2" id="category-2" className="category-checkbox" checked={selectedCategoryIds.includes('2')} onChange={() => toggleCategory('2')} style={{ marginRight: '12px', position: 'relative', top: "2px" }} />
-                                    <label htmlFor="category-2">PICKLEBALL COURTS</label>
+                                    <label htmlFor="category-2" style={{color: '#555', fontSize: '16px', cursor: 'pointer'}}>PICKLEBALL COURTS</label>
                                 </li>
-                                <li className="text-grey font-Yantramanav fw-400 category-item" data-category-id="3">
+                                <li className="text-grey font-Yantramanav fw-400 category-item" data-category-id="3" style={{marginBottom: '8px', padding: '8px 0'}}>
                                     <input type="checkbox" name="catID[]" value="3" id="category-3" className="category-checkbox" checked={selectedCategoryIds.includes('3')} onChange={() => toggleCategory('3')} style={{ marginRight: '12px', position: 'relative', top: "2px" }} />
-                                    <label htmlFor="category-3">SPIKE BALL COURTS</label>
+                                    <label htmlFor="category-3" style={{color: '#555', fontSize: '16px', cursor: 'pointer'}}>SPIKE BALL COURTS</label>
                                 </li>
                             </ul>
 
@@ -298,26 +298,26 @@ const ProductsPage = () => {
                                 />
                             </div>
                             <div>
-                                <h3 className="font-oswald pb-2 pt-3">Sort By</h3>
+                                <h3 className="font-oswald pb-2 pt-3" style={{color: '#333', fontSize: '18px', fontWeight: '600'}}>Sort By</h3>
                             </div>
-                            <ul className="ps-0 category-listed" id="sort-list">
-                                <li className="text-grey font-Yantramanav fw-400 sort-item" data-sort-by="desc">
-                                    <input type="radio" name="sort_by" id="sort-desc" checked={sortBy === 'desc'} onChange={() => setSortBy('desc')} className="sort-radio" value="desc" />
-                                    <label htmlFor="sort-desc" class="form-check-label ms-1">High to Low</label>
+                            <ul className="ps-0 category-listed" id="sort-list" style={{listStyle: 'none', padding: 0}}>
+                                <li className="text-grey font-Yantramanav fw-400 sort-item" data-sort-by="desc" style={{marginBottom: '8px', padding: '8px 0'}}>
+                                    <input type="radio" name="sort_by" id="sort-desc" checked={sortBy === 'desc'} onChange={() => setSortBy('desc')} className="sort-radio" value="desc" style={{marginRight: '12px', position: 'relative', top: "2px" }} />
+                                    <label htmlFor="sort-desc" className="form-check-label ms-1" style={{color: '#555', fontSize: '16px', cursor: 'pointer'}}>High to Low</label>
                                 </li>
-                                <li className="text-grey font-Yantramanav fw-400 sort-item" data-sort-by="asc">
-                                    <input type="radio" name="sort_by" id="sort-asc" checked={sortBy === 'asc'} onChange={() => setSortBy('asc')} className="sort-radio" value="asc" />
-                                    <label htmlFor="sort-asc" class="form-check-label ms-1">Low to High</label>
+                                <li className="text-grey font-Yantramanav fw-400 sort-item" data-sort-by="asc" style={{marginBottom: '8px', padding: '8px 0'}}>
+                                    <input type="radio" name="sort_by" id="sort-asc" checked={sortBy === 'asc'} onChange={() => setSortBy('asc')} className="sort-radio" value="asc" style={{marginRight: '12px', position: 'relative', top: "2px" }} />
+                                    <label htmlFor="sort-asc" className="form-check-label ms-1" style={{color: '#555', fontSize: '16px', cursor: 'pointer'}}>Low to High</label>
                                 </li>
                             </ul>
 
-                            <button type="submit" className="green-btn w-100 mt-3">Apply Filter</button>
+                            <button type="submit" className="green-btn w-100 mt-3" style={{backgroundColor: '#7AB751', color: '#fff', border: 'none', padding: '12px 20px', borderRadius: '8px', fontSize: '16px', fontWeight: '600'}}>Apply Filter</button>
                         </div>
                         </form>
                     </div>
 
                     <div className="col-lg-9">
-                        <h3 className="font-oswald mb-3">Products</h3>
+                        <h3 className="font-oswald mb-3" style={{color: '#333', fontSize: '24px', fontWeight: '600'}}>Products</h3>
                         {(appliedCategoryIds.length > 0 || (appliedSortBy && appliedSortBy !== 'desc')) && (
                             <div className="productfilter d-flex align-items-baseline gap-2">
                                 <p className="fw-500 mb-0 lh-1">Filter:</p>
@@ -394,17 +394,14 @@ const ProductsPage = () => {
                                     <div className="col-md-6 col-xl-4 mb-3" key={p.id}>
                                         {/* /product-detail */}
                                         <a href={`/product-detail/${p.slug}?id=${p.id}`} className="text-decoration-none">
-                                            <div className="feature-pro">
-                                                <div className="product-feature-img product-bg position-relative">
-                                                    {/* nothing works */}
-                                                    <img alt="product_images" src={imgSrc} className="img-fluid product-pic max-w-full max-h-full object-contain block" />
-
-                                                    {/* <img alt="product_images" src={imgSrc} className="img-fluid product-pic" /> */}
+                                            <div className="feature-pro" style={{backgroundColor: '#fff', borderRadius: '12px', boxShadow: '0 2px 8px rgba(0,0,0,0.1)', overflow: 'hidden'}}>
+                                                <div className="product-feature-img product-bg position-relative" style={{height: '250px', overflow: 'hidden'}}>
+                                                    <img alt="product_images" src={imgSrc} className="img-fluid product-pic" style={{width: '100%', height: '100%', objectFit: 'cover'}} />
                                                     <a 
                                                         className="icon-wish-product addwishlist" 
                                                         data-product-id={p.id}
                                                         onClick={(e) => handleWishlistToggle(p.id, e)}
-                                                        style={{ cursor: 'pointer' }}
+                                                        style={{ cursor: 'pointer', position: 'absolute', top: '12px', right: '12px', zIndex: 2 }}
                                                     >
                                                         {updatingWishlist.has(p.id) ? (
                                                             <div className="spinner-border spinner-border-sm text-white" role="status">
@@ -416,19 +413,20 @@ const ProductsPage = () => {
                                                                     ? `${window.location.origin}/webassets/img/green-wishlist-bg.svg` 
                                                                     : `${window.location.origin}/webassets/img/unfillwishlist.svg`
                                                                 } 
-                                                                className="wishlist-icon rounded-md bg-green-300 shadow-xl" 
+                                                                className="wishlist-icon" 
                                                                 alt={wishlistItems.has(p.id) ? "Remove from wishlist" : "Add to wishlist"}
+                                                                style={{width: '24px', height: '24px'}}
                                                             />
                                                         )}
                                                     </a>
                                                 </div>
                                                 <div className="px-3 py-4 text-black">
-                                                    <h3 className="text-capitalize mb-2 fw-400 one-line text-black">{p.title}</h3>
+                                                    <h3 className="text-capitalize mb-2 fw-400 one-line text-black" style={{fontSize: '18px', color: '#333', fontWeight: '500'}}>{p.title}</h3>
                                                     <div className="d-flex align-items-center justify-content-between">
                                                         <div>
-                                                            <p className="mb-0">
-                                                                <span className="primary-theme price-offer">${item.discounted_price || ''}.00</span>
-                                                                <span className="ms-2 price-old">${item.price || ''}.00</span>
+                                                            <p className="mb-1" style={{fontSize: '16px'}}>
+                                                                <span className="primary-theme price-offer" style={{color: '#7AB751', fontWeight: '600'}}>${item.discounted_price || ''}.00</span>
+                                                                <span className="ms-2 price-old" style={{color: '#999', textDecoration: 'line-through'}}>${item.price || ''}.00</span>
                                                             </p>
                                                             <div className="d-flex align-items-center gap-1">
                                                                 {[...Array(5)].map((_, i) => (
@@ -436,11 +434,14 @@ const ProductsPage = () => {
                                                                         key={i}
                                                                         className={i < Math.floor(p.average_rating || 0) ? 'fa fa-star' : 'fa fa-star-o'}
                                                                         aria-hidden="true"
+                                                                        style={{color: i < Math.floor(p.average_rating || 0) ? '#ffc107' : '#ddd', fontSize: '14px'}}
                                                                     ></i>
                                                                 ))}
                                                             </div>
                                                         </div>
-                                                        <img src={`${window.location.origin}/webassets/img/cart.svg`} />
+                                                        <a href={`/product-detail/${p.slug}?id=${p.id}`} style={{textDecoration: 'none'}}>
+                                                            <img src={`${window.location.origin}/webassets/img/addtocart.svg`} style={{width: '32px', height: '32px', cursor: 'pointer'}} alt="Add to Cart" />
+                                                        </a>
                                                     </div>
                                                 </div>
                                             </div>
