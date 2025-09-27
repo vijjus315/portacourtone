@@ -255,7 +255,7 @@ const SignupModal = () => {
       aria-labelledby="staticBackdropLabel"
     >
       <div className="modal-dialog modal-dialog-centered">
-        <div className="modal-content modal-content-width">
+        <div className="modal-content modal-content-width" style={{ borderRadius: "40px"}}>
           <div className="modal-header border-0">
             <h5 className="modal-title font-Yantramanav" id="staticBackdropLabel">
               Welcome to Portacourts
@@ -402,6 +402,7 @@ const SignupModal = () => {
                   <a
                     href="https://www.portacourts.com/term-conditions"
                     className="text-decoration-underline"
+                    style={{ color: "#4ca7a5" }}
                   >
                     Terms and Conditions
                   </a>
@@ -419,6 +420,15 @@ const SignupModal = () => {
                 <button
                   type="submit"
                   className="btn green-btn w-100 box-shadow"
+                  style={{ backgroundColor: "var(--primary-theme)",
+                                    color: "#fff", 
+                                    borderRadius: "10px", 
+                                    padding: "11px 31px", 
+                                    height: "50px", 
+                                    border: "0",
+                                    textTransform: "capitalize", 
+                                    fontSize: "16px"
+                                }}
                   disabled={submitting}
                 >
                   {submitting ? (
@@ -442,6 +452,7 @@ const SignupModal = () => {
                     href="#"
                     data-bs-toggle="modal"
                     data-bs-target="#loginmodal"
+                    style={{ color: "#4ca7a5" }}
                   >
                     Sign In
                   </a>
