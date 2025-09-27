@@ -307,10 +307,12 @@ const Header = () => {
                             ) : !isLoggedIn ? (
                                 <div className="d-flex gap-4 align-items-center">
                                     <button 
-                                        className="btn green-btn text-white" 
+                                        className="btn text-white" 
                                         data-bs-toggle="modal" 
                                         data-bs-target="#loginmodal" 
                                         type="button"
+                                        style={{ backgroundColor: "var(--primary-theme)",
+                                        color: "#fff", padding: "12px 28px", fontSize: "1rem" }}
                                         onClick={(e) => {
                                             console.log('🔄 Login button clicked');
                                             
@@ -353,6 +355,7 @@ const Header = () => {
                                         data-bs-toggle="modal" 
                                         data-bs-target="#signupmodal" 
                                         type="button"
+                                        style={{ backgroundColor: "#1e90ff", padding: "12px 25px", fontSize: "1rem", borborderRadius: "12px" }}
                                         onClick={(e) => {
                                             console.log('🔄 Signup button clicked');
                                             
