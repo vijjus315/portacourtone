@@ -82,7 +82,7 @@ function App() {
               <Route
                 path="/product-detail/:slug"
                 element={
-                  <PageLayout title="Product Detail">
+                  <PageLayout title="">
                     <ProductDetail />
                   </PageLayout>
                 }

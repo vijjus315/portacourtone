@@ -200,7 +200,7 @@ const Reviews = ({ productRatings = [] }) => {
                                     border: "0",
                                     textTransform: "capitalize", 
                                     fontSize: "16px"
-                                }}
+                    }}
                   >
                     Submit Review
                   </button>

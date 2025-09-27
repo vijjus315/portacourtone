@@ -112,8 +112,6 @@ const DUMMY_PRODUCTS = [
   },
 ];
 
-
-
 const ProductDetail = () => {
     const [allProducts, setAllProducts] = useState([]);
     const [product, setProduct] = useState(null);
@@ -318,7 +316,6 @@ const ProductDetail = () => {
     if (!product) {
         return (
             <>
-                <Header />
                 <section className="py-5">
                     <div className="container">
                         <div className="d-flex justify-content-center align-items-center" style={{ minHeight: '400px' }}>
@@ -331,30 +328,28 @@ const ProductDetail = () => {
                         </div>
                     </div>
                 </section>
-                <Footer />
             </>
         );
     }
 
-
     return (
         <>
-            <Header />
             {/* Main Product Section */}
             <section className="py-5">
                 <div className="container">
                     <div className="row">
 
-                        {/* LEFT COLUMN: Product Image Gallery */}
+                        {/* LEFT COLUMN: Product Image Gallery slider*/}
                         <div className="col-lg-6">
-                            <div className="slider">
+                            <div className="">
                                 <div className="slider__flex ">
 
                                     {/* Thumbnails */}
                                     <div className="slider__col">
-                                        <div className="slider__thumbs">
-                                            <div className="swiper-container overflow-scroll">
-                                                <div className="swiper-wrapper thumbnail-slider d-flex flex-lg-column gap-0.5">
+                                        <div>
+                                            {/* slider bana lena  */}
+                                            <div className=" overflow-scroll border border-black">
+                                                <div className="thumbnail-slider d-flex flex-lg-column gap-0.5">
                                                     {images.map((src, idx) => (
                                                         <div key={idx} className="swiper-slide" onClick={() => setActiveImageIdx(idx)} 
                                                         style={{cursor:'pointer', 
@@ -372,7 +367,7 @@ const ProductDetail = () => {
                                     </div>
 
                                     {/* Main Image */}
-                                    <div className="slider__images" style={{ height: "400px" }}>
+                                    <div className="slider__images" style={{ height: "400px" }} >
                                         <div className="swiper-container border">
                                             <div className="swiper-wrapper ">
                                                 <div className="swiper-slide">
@@ -411,7 +406,6 @@ const ProductDetail = () => {
                                         )}
                                     </div>
                                 </div>
-
                                 <hr />
 
                                 {/* Variant Size */}
@@ -551,8 +545,7 @@ const ProductDetail = () => {
             <VerifyEmailModal />
             <ChangePasswordModal />
             <EditProfileModal />
-            
-            <Footer />
+        
         </>
     );
 };

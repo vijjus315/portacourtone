@@ -118,7 +118,7 @@ const Cart = () => {
       {/* cart with item */}
       <section className="pt-5">
         <div className="container">
-          <h1 className="text-decoration-underline">Cart</h1>
+          <h1 className="text-decoration-underline" style={{ fontSize: "48px"}}>Cart</h1>
         </div>
 
         {/* Integrated Cart Section */}
@@ -127,8 +127,9 @@ const Cart = () => {
             <div className="row common-card-bg">
               {/* Left Side - Cart Items */}
               <div className="col-lg-8 mb-3 mb-lg-0 h-100">
-                <div className="add-cart-detail px-2">
-                  <div className="table-responsive table-height">
+                <div className="add-cart-detail px-2" >
+                  <div className="table-responsive table-height"  
+                  style={{ backgroundColor: "#fff", height: "100%", boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)" }}>
                     <table className="w-100 table cart-table">
                       <thead
                         style={{ verticalAlign: 'middle', height: '70px' }}
@@ -383,7 +384,17 @@ const Cart = () => {
                   <button
                     type="button"
                     id="placeOrderButton"
-                    className="green-btn w-100 w-auto d-flex justify-content-center align-items-center"
+                    className="green-btn w-100 w-auto d-flex justify-content-center align-items-center "
+                    style={{ backgroundColor: "var(--primary-theme)",
+                                    color: "#fff", 
+                                    borderRadius: "10px", 
+                                    padding: "11px 31px", 
+                                    height: "50px", 
+                                    border: "0",
+                                    textTransform: "capitalize", 
+                                    fontSize: "16px",
+                                    marginLeft: "20px"
+                                }}
                   >
                     Place Order
                   </button>
@@ -392,7 +403,7 @@ const Cart = () => {
 
               {/* Right Side - Order Summary */}
               <div className="col-lg-4">
-                <div className="order-details-side px-1 px-md-3 py-3 bg-white">
+                <div className="order-details-side px-1 px-md-3 py-3 bg-white" style={{ backgroundColor: "#fff", boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)" }}>
                   <h4 className="fw-700 font-oswald">Order Summary</h4>
                   <ul className="ps-0 list-style-none pt-3">
                     <li>
@@ -472,7 +483,15 @@ const Cart = () => {
                         type="button"
                         className="btn green-btn"
                         id="applyCoupon"
-                        style={{ color: "green", textDecorationColor: "white" }}
+                        style={{ backgroundColor: "var(--primary-theme)",
+                                    color: "#fff", 
+                                    borderRadius: "10px", 
+                                    padding: "11px 31px", 
+                                    height: "50px", 
+                                    border: "0",
+                                    textTransform: "capitalize", 
+                                    fontSize: "16px"
+                                }}
                       >
                         Apply
                       </button>

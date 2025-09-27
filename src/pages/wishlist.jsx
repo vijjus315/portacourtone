@@ -163,7 +163,8 @@ const Wishlist = () => {
       <div className="container py-5">
         <div className="row">
           <div className="col-12">
-            <div style={{ height: '8px', width: '95px', backgroundColor: 'green', marginBottom: '5px' }}></div>
+            <div style={{ height: '8px', width: '95px', backgroundColor: "var(--primary-theme)",
+                                    color: "#fff", marginBottom: '5px' }}></div>
             <h1 className="mb-5">My Wishlist</h1>
           </div>
         </div>
