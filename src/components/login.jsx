@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { login as apiLogin } from '../services/auth.js';
 import { checkAndOpenOTPVerification } from '../utils/otpVerification.js';
+import "../styles/bootstrap.js"
 
 function getCsrf() {
     // Look for a <meta> tag in the HTML with name="csrf-token"
@@ -232,8 +233,8 @@ const LoginModal = () => {
 
     return (
         <div className="modal fade" id="loginmodal" data-bs-backdrop="static" data-bs-keyboard="false" tabIndex="-1" aria-labelledby="staticBackdropLabel">
-            <div className="modal-dialog modal-dialog-centered">
-                <div className="modal-content modal-content-width">
+            <div className="modal-dialog modal-dialog-centered" >
+                <div className="modal-content modal-content-width" style={{ borderRadius: "40px"}}>
                     <div className="modal-header border-0">
                         <h5 className="modal-title font-Yantramanav" id="staticBackdropLabel">Welcome to Portacourts</h5>
                         <button type="button" className="btn-closed border-0 bg-transparent" data-bs-dismiss="modal" aria-label="Close"><img src={`${window.location.origin}/webassets/img/cross.svg`} /></button>
@@ -244,14 +245,16 @@ const LoginModal = () => {
                             <input type="hidden" name="_token" value={getCsrf()} />
                             <div className="form-group mb-4">
                                 <label className="pb-2">Email</label>
-                                <input type="email" className="form-control common-input" id="loginEmail" placeholder="Email address" name="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+                                <input type="email" className="form-control common-input" style={{ outline: '1px solid green', 
+                    boxShadow: 'none', }} id="loginEmail" placeholder="Email address" name="email" value={email} onChange={(e) => setEmail(e.target.value)} />
                                 <span className="text-danger error-message" id="login-error-email">{errors.email && errors.email[0]}</span>
                                 <div className="invalid-feedback"></div>
                             </div>
                             <div className="form-group">
                                 <label className="pb-2">Password</label>
                                 <div className="position-relative">
-                                    <input type="password" className="form-control common-input password-field" id="loginPassword" placeholder="Password" name="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+                                    <input type="password" className="form-control common-input password-field" style={{ outline: '1px solid green', 
+                    boxShadow: 'none', }} id="loginPassword" placeholder="Password" name="password" value={password} onChange={(e) => setPassword(e.target.value)} />
                                     <div className="icon-eye">
                                         <i className="fa fa-eye toggle-password" aria-hidden="true"></i>
                                     </div>
@@ -269,15 +272,32 @@ const LoginModal = () => {
                                     Forgot Password?
                                 </a>
                             </div>
-                            <div className="pt-4 pb-3">
-                                <button type="submit" className="btn green-btn w-100 box-shadow" disabled={submitting}>{submitting ? 'Signing in…' : 'Sign in'}</button>
+                            <div className="pt-4 pb-3 ">
+                                <button type="submit" 
+                                className="btn green-btn w-100 box-shadow "
+                                style={{ backgroundColor: "var(--primary-theme)",
+                                    color: "#fff", 
+                                    borderRadius: "10px", 
+                                    padding: "11px 31px", 
+                                    height: "50px", 
+                                    border: "0",
+                                    textTransform: "capitalize", 
+                                    fontSize: "16px"
+                                }}
+                                disabled={submitting}
+                                >
+                                    {submitting ? 'Signing in…' : 'Sign in'}
+                                </button>
                             </div>
                             <div className="text-center">
-                                <p className="font-Yantramanav light-grey"> Don't have any account? <a className="theme_color text-decoration-underline fw-500" href="#" data-bs-toggle="modal" data-bs-target="#signupmodal" onClick={() => {
+                                <p className="font-Yantramanav light-grey"> Don't have any account? 
+                                    <a className="theme_color text-decoration-underline fw-500" href="#" data-bs-toggle="modal" data-bs-target="#signupmodal" onClick={() => {
                                     // Ensure page is active when switching to signup modal
                                     window.focus();
                                     document.body.focus();
-                                }}>Sign up</a></p>
+                                }}
+                                style={{ color: "#4ca7a5" }}
+                                >Sign up</a></p>
                             </div>
                         </form>
                     </div>
